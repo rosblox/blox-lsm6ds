@@ -32,7 +32,7 @@ services:
     command: ros2 run ros_lsm6ds ros_lsm6ds_publisher
 
   ros-imu-complementary-filter:
-    image: ghcr.io/rosblox/ros-imu-complementary-filter:humble
+    image: ghcr.io/rosblox/ros-imu-tools:humble
     restart: always
     network_mode: "host"
     command: ros2 run imu_complementary_filter complementary_filter_node
