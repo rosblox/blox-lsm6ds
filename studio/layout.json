@@ -1,0 +1,49 @@
+{
+    "configById": {
+      "3D!2qpihlh": {
+        "cameraState": {
+          "distance": 1.2484429212970496,
+          "perspective": true,
+          "phi": 1.026033804714134,
+          "target": [
+            0,
+            0,
+            0
+          ],
+          "targetOffset": [
+            -0.04920411202804428,
+            0.12159473528157634,
+            0
+          ],
+          "targetOrientation": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "thetaOffset": -0.6527812888121954,
+          "fovy": 0.7853981633974483,
+          "near": 0.01,
+          "far": 5000
+        },
+        "scene": {
+          "enableStats": false,
+          "labelPixelsPerUnit": 300,
+          "transforms": {
+            "showLabel": true
+          }
+        },
+        "transforms": {},
+        "topics": {},
+        "layers": {}
+      }
+    },
+    "globalVariables": {},
+    "userNodes": {},
+    "linkedGlobalVariables": [],
+    "playbackConfig": {
+      "speed": 1,
+      "messageOrder": "receiveTime"
+    },
+    "layout": "3D!2qpihlh"
+  }
