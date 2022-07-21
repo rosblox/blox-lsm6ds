@@ -10,8 +10,8 @@ services:
 
   rosblox-studio:
     image: ghcr.io/rosblox/studio:latest
-    # volumes:
-    #   - ./studio/layout.json:/src/layout.json
+    volumes:
+      - ./studio/layout.json:/src/layout.json
     ports:
       - 8080:8080
     restart: always
