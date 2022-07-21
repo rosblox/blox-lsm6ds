@@ -31,11 +31,11 @@ services:
     privileged: true
     command: ros2 run ros_lsm6ds ros_lsm6ds_publisher
 
-  ros-imu-complementary-filter:
+  ros-imu-tools:
     image: ghcr.io/rosblox/ros-imu-tools:humble
     volumes:
       - ./imu_filter_madgwick/imu_filter.launch.py:/opt/ros/humble/share/imu_filter_madgwick/launch/imu_filter.launch.py
-      - ./imu_filter_madgwick/imu_filter.yaml.py:/opt/ros/humble/share/imu_filter_madgwick/config/imu_filter.yaml
+      - ./imu_filter_madgwick/imu_filter.yaml:/opt/ros/humble/share/imu_filter_madgwick/config/imu_filter.yaml
     restart: always
     network_mode: "host"
     command: ros2 run imu_filter_madgwick imu_filter.launch.py
