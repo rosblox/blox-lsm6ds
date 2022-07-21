@@ -33,6 +33,9 @@ services:
 
   ros-imu-complementary-filter:
     image: ghcr.io/rosblox/ros-imu-tools:humble
+    volumes:
+      - ./imu_filter_madgwick/imu_filter.launch.py:/opt/ros/humble/share/imu_filter_madgwick/launch/imu_filter.launch.py
+      - ./imu_filter_madgwick/imu_filter.yaml.py:/opt/ros/humble/share/imu_filter_madgwick/config/imu_filter.yaml
     restart: always
     network_mode: "host"
-    command: ros2 run imu_complementary_filter complementary_filter_node
+    command: ros2 run imu_filter_madgwick imu_filter.launch.py
