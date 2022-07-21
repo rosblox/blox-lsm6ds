@@ -38,4 +38,4 @@ services:
       - ./imu_filter_madgwick/imu_filter.yaml:/opt/ros/humble/share/imu_filter_madgwick/config/imu_filter.yaml
     restart: always
     network_mode: "host"
-    command: ros2 run imu_filter_madgwick imu_filter.launch.py
+    command: ros2 launch imu_filter_madgwick imu_filter.launch.py
