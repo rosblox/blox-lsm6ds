@@ -23,13 +23,13 @@ services:
     restart: always
     command: ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 
-  ros-lsm6ds:
-    image: ghcr.io/rosblox/ros-lsm6ds:humble
+  ros-lsm6dsox-lis3mdl:
+    image: ghcr.io/rosblox/ros-lsm6dsox-lis3mdl:humble
     devices:
       - "/dev/i2c-1:/dev/i2c-1"
     restart: always
     privileged: true
-    command: ros2 run ros_lsm6ds ros_lsm6ds_publisher
+    command: ros2 run ros_lsm6dsox_lis3mdl ros_lsm6dsox_lis3mdl_publisher
 
   ros-imu-tools:
     image: ghcr.io/rosblox/ros-imu-tools:humble
