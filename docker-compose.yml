@@ -29,6 +29,7 @@ services:
       - "/dev/i2c-1:/dev/i2c-1"
     restart: always
     privileged: true
+    network_mode: "host"
     command: ros2 run ros_lsm6dsox_lis3mdl ros_lsm6dsox_lis3mdl_publisher
 
   ros-imu-tools:
