@@ -23,20 +23,23 @@ services:
     restart: always
     command: ros2 launch rosbridge_server rosbridge_websocket_launch.xml
 
-  ros-lsm6dsox-lis3mdl:
-    image: ghcr.io/rosblox/ros-lsm6dsox-lis3mdl:humble
-    devices:
-      - "/dev/i2c-1:/dev/i2c-1"
-    restart: always
-    privileged: true
-    network_mode: "host"
-    command: ros2 run ros_lsm6dsox_lis3mdl ros_lsm6dsox_lis3mdl_publisher
-
   ros-imu-tools:
     image: ghcr.io/rosblox/ros-imu-tools:humble
     volumes:
       - ./imu_filter_madgwick/imu_filter.launch.py:/opt/ros/humble/share/imu_filter_madgwick/launch/imu_filter.launch.py
       - ./imu_filter_madgwick/imu_filter.yaml:/opt/ros/humble/share/imu_filter_madgwick/config/imu_filter.yaml
+      - /dev/shm:/dev/shm
     restart: always
     network_mode: "host"
     command: ros2 launch imu_filter_madgwick imu_filter.launch.py
+
+  ros-lsm6dsox-lis3mdl:
+    image: ghcr.io/rosblox/ros-lsm6dsox-lis3mdl:humble
+    devices:
+      - "/dev/i2c-1:/dev/i2c-1"
+    volumes:
+      - /dev/shm:/dev/shm
+    restart: always
+    privileged: true
+    network_mode: "host"
+    command: ros2 run ros_lsm6dsox_lis3mdl ros_lsm6dsox_lis3mdl_publisher
