@@ -1,49 +1,62 @@
 {
-    "configById": {
-      "3D!2qpihlh": {
-        "cameraState": {
-          "distance": 1.2484429212970496,
-          "perspective": true,
-          "phi": 1.026033804714134,
-          "target": [
-            0,
-            0,
-            0
-          ],
-          "targetOffset": [
-            -0.04920411202804428,
-            0.12159473528157634,
-            0
-          ],
-          "targetOrientation": [
-            0,
-            0,
-            0,
-            1
-          ],
-          "thetaOffset": -0.6527812888121954,
-          "fovy": 0.7853981633974483,
-          "near": 0.01,
-          "far": 5000
+  "configById": {
+    "3D!2qpihlh": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 245.94463110414634,
+        "phi": 56.59924606350748,
+        "thetaOffset": -36.20329207201366,
+        "targetOffset": [
+          0.03572923523076897,
+          0.20603223096605655,
+          -8.025367364241473e-22
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 0.7853981633974483,
+        "near": 0.01,
+        "far": 5000
+      },
+      "scene": {
+        "enableStats": false,
+        "labelPixelsPerUnit": 300,
+        "transforms": {
+          "showLabel": true,
+          "labelSize": 0.08999999999999997,
+          "axisScale": 3.5
         },
-        "scene": {
-          "enableStats": false,
-          "labelPixelsPerUnit": 300,
-          "transforms": {
-            "showLabel": true
-          }
-        },
-        "transforms": {},
-        "topics": {},
-        "layers": {}
+        "labelScaleFactor": 1
+      },
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "followMode": "follow-pose",
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
       }
-    },
-    "globalVariables": {},
-    "userNodes": {},
-    "linkedGlobalVariables": [],
-    "playbackConfig": {
-      "speed": 1,
-      "messageOrder": "receiveTime"
-    },
-    "layout": "3D!2qpihlh"
-  }
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "linkedGlobalVariables": [],
+  "playbackConfig": {
+    "speed": 1,
+    "messageOrder": "receiveTime"
+  },
+  "layout": "3D!2qpihlh"
+}
